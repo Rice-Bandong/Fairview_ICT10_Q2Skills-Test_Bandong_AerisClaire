@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Metal Elements Finder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+</head>
+<body class="bg-light">
+
+    <div class="container py-5" style="max-width: 650px;">
+        <div class="card shadow-sm border-0 mb-4 bg-primary text-white">
+            <div class="card-body text-center py-4">
+                <h1 class="fw-bold h3">Non-Metal Elements</h1>
+                <p class="mb-0 small">Periodic Table Information Finder</p>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0 mb-4">
+            <div class="card-body p-4">
+                <p class="text-muted small">Instructions: Enter the symbol of a non-metal element (Example: H, O, Cl, Ne, Rn).</p>
+                
+                <div class="mb-3">
+                    <label for="Element1" class="form-label fw-bold small text-uppercase text-secondary">Element Symbol</label>
+                    <input type="text" id="Element1" class="form-control" placeholder="e.g. H">
+                </div>
+
+                <button py-click="search_element" class="btn btn-success w-100 py-2 fw-bold">Check Details</button>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+                <h5 class="fw-bold mb-3 small text-uppercase text-secondary">📋 Result</h5>
+                <div id="output" class="p-3 bg-light rounded border text-muted small">
+                    <p class="mb-1"><strong>Symbol:</strong> -</p>
+                    <p class="mb-1"><strong>Element:</strong> -</p>
+                    <p class="mb-1"><strong>Atomic Number:</strong> -</p>
+                    <p class="mb-0"><strong>Atomic Mass:</strong> -</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="py" src="main.py" config='{"interpreter": "pyodide"}'></script>
+
+</body>
+</html>
